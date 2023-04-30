@@ -1,0 +1,121 @@
+@media screen and (max-width: 300px) {
+  .appcontainer {
+    flex-direction: column;
+    justify-items: center;
+  }
+}
+
+.appcontainer {
+  background-color: #2b2d42;
+  color: #f8f8f2;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.appcontainer h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: inline;
+}
+
+.appcontainer label {
+  font-size: 18px;
+  text-align: center;
+}
+
+.appcontainer .selectCurrency {
+  margin-right: 10px;
+  
+}
+
+.appcontainer select {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 16px;
+  background-color: #f8f8f2;
+  color: #2b2d42;
+  border: none;
+  border-radius: 5px;
+}
+
+.appcontainer select:focus {
+  outline: none;
+}
+
+.appcontainer > div > div {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appcontainer .trendSquare {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.appcontainer .green {
+  background-color: #50c878;
+}
+
+.appcontainer .yellow {
+  background-color: #f1c40f;
+}
+
+.appcontainer .red {
+  background-color: #ff5733;
+}
+
+.appcontainer .long {
+  background-color: #50c878;
+}
+
+.appcontainer .neutral {
+  background-color: #f1c40f;
+}
+
+.appcontainer .short {
+  background-color: #ff5733;
+}
+
+.appcontainer .greenTrend {
+  background-color: #50c878;
+}
+
+.appcontainer .yellowTrend {
+  background-color: #f1c40f;
+}
+
+.appcontainer .redTrend {
+  background-color: #ff5733;
+}
+
+.appcontainer button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f8f8f2;
+  color: #2b2d42;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.appcontainer button:hover {
+  background-color: #e5e5e5;
+  color: #2b2d42;
+}
+.appcontainer label.selectCurrency,
+.appcontainer div > div,
+.appcontainer button {
+  margin: 10px auto;
+  display: block;
+  text-align: center;
+}

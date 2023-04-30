@@ -1,0 +1,26 @@
+/* Style for the AppContainer component */
+.AppContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Style for the AppSelector components */
+  .AppSelector {
+    width: calc(25% - 16px);
+    margin: 8px;
+  }
+  
+  /* Media query for screens smaller than 600px */
+  @media only screen and (max-width: 600px) {
+    .AppSelector {
+      width: calc(50% - 16px);
+    }
+  }
+  
+  /* Media query for screens smaller than 450px */
+  @media only screen and (max-width: 450px) {
+    .AppSelector {
+      width: calc(100% - 16px);
+    }
+  }

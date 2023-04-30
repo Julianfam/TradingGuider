@@ -11,8 +11,16 @@
   "dependencies": {
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "file-saver": "^2.0.5",
+    "html2canvas": "^1.4.1",
     "next": "13.3.0",
+    "next-pwa": "^5.6.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.61.0"
+  },
+  "devDependencies": {
+    "serviceworker-webpack-plugin": "^1.0.1",
+    "workbox-webpack-plugin": "^6.5.4"
   }
 }
