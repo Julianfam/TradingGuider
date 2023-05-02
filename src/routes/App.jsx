@@ -16,7 +16,6 @@ const App = () => {
             <BrowserRouter>
                 <Layout>
                     <Routes>
-                       
                        <Route path="/MainPage" element={<MainPage />} /> 
                        <Route path="/" element={<Home />} />
                        <Route path="*" element={<NotFound />} />       

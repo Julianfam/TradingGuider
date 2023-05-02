@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Clock from './Clock';
 
-const header = () => {
+const Header = () => {
   return (
-    <div>header</div>
+    <div>
+         <Clock />
+    </div>
   )
 }
 
-export default header
+export default Header

@@ -23,10 +23,10 @@ const timeFrames = ["Monthly", "Weekly", "Daily", "Hourly"];
 function AppSelector() {
   const [selectedCurrency, setSelectedCurrency] = useState("");
   const [timeFrameValues, setTimeFrameValues] = useState({
-    Monthly: "",
-    Weekly: "",
-    Daily: "",
-    Hourly: "",
+    Month: "",
+    Day: "",
+    "4 H": "",
+    "1 H": "",
   });
 
   const handleCurrencyChange = (e) => {
@@ -41,24 +41,21 @@ function AppSelector() {
   const getTrendColor = () => {
     const colors = Object.values(timeFrameValues);
     const greenCount = colors.filter((c) => c === "green").length;
-    const yellowCount = colors.filter((c) => c === "yellow").length;
+    const yellowCount = colors.filter((c) => c === "orange").length;
     const redCount = colors.filter((c) => c === "red").length;
-
+  
     if (greenCount >= 3) {
-      return "long";
+      return { color: "long", backgroundColor: "green" };
     } else if (yellowCount >= 2) {
-      return "neutral";
+      return { color: "neutral", backgroundColor: "orange" };
     } else if (redCount == 2) {
-      return "neutral";
-      
-    }else if (greenCount == 2) {
-      return "neutral";
-      
-    }
-      else if (redCount >= 3) {
-      return "short";
+      return { color: "neutral", backgroundColor: "orange" };
+    } else if (greenCount == 2) {
+      return { color: "neutral", backgroundColor: "orange" };
+    } else if (redCount >= 3) {
+      return { color: "short", backgroundColor: "red" };
     } else {
-      return "";
+      return { color: "NO", backgroundColor: "transparent" };
     }
   };
   //save local
@@ -106,7 +103,7 @@ function AppSelector() {
         <div key={timeFrame}>
           <label className={styles.timeFrameLabel} htmlFor={timeFrame}>{timeFrame}:</label>
           <select className={styles.timeFrameSelect} id={timeFrame} name={timeFrame} value={timeFrameValues[timeFrame]} onChange={handleTimeFrameChange}>
-            <option value="">--Select Color--</option>
+            <option value="">-Select Trend-</option>
             <option value="green" style={{ color: "green" }}>Long</option>
             <option value="orange" style={{ color: "orange" }}>Neutral</option>
             <option value="red" style={{ color: "red" }}>Short</option>
@@ -114,9 +111,9 @@ function AppSelector() {
         </div>
       ))}
       <div className={styles.selectedCurrency}>{selectedCurrency}</div>
-      <div className={`${styles.trendSquare} ${getTrendColor()}`}>
-        {getTrendColor() ? `${getTrendColor().toUpperCase()} TREND` : "No Trend Selected"}
-      </div>
+      <div className={`${styles.trendSquare} ${getTrendColor().color}`} style={{ backgroundColor: getTrendColor().backgroundColor }}>
+  {getTrendColor() ? `${getTrendColor().color.toUpperCase()} TREND` : "No Trend Selected"}
+</div>
       <button className={styles.saveScreenshotBtn} onClick={() => handleScreenshotSave(selectedCurrency, getTrendColor())}>Save Screenshot</button>
       
     </div>

@@ -1,6 +1,8 @@
 import React from 'react';
+import Title from '@components/Title';
 
 import AppContainer from '@components/AppContainer';
+
 
 
 
@@ -12,7 +14,7 @@ import AppContainer from '@components/AppContainer';
 
 const MainPage = () => {
   return (<>
-    <h1>Price Trend Control App</h1>
+    <Title />
     <AppContainer />
     </>
     

@@ -1,0 +1,18 @@
+.titulos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+  
+  .titulos h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .titulos h2 {
+    font-size: 1rem;
+    margin-top: 0;
+  }
+  
