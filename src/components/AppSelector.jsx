@@ -7,14 +7,12 @@ import styles from '@styles/AppSelector.module.scss';
 const currencyPairs = [
   "EUR/USD",
   "USD/JPY",
-  "GBP/USD",
-  "AUD/USD",
+  "GBP/JPY",
+  "AUD/NZD",
   "USD/CHF",
   "NZD/USD",
   "USD/CAD",
   "EUR/JPY",
-  "EUR/GBP",
-  "EUR/CHF",
   // add more currency pairs here...
 ];
 
